@@ -1,0 +1,7 @@
+-r ./base.txt
+gunicorn
+psycopg2
+Collectfast
+sentry-sdk
+django-storages[boto3]
+django-anymail[mailgun]
