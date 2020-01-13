@@ -16,6 +16,7 @@ urlpatterns = [
     path("users/", include("hole.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('api/', include('config.api_urls', namespace='api')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -41,7 +41,10 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 # DATABASES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
-DATABASES = {"default": env.db("DATABASE_URL")}
+# DATABASES = {"default": env.db("DATABASE_URL")}
+DATABASES = {
+    'default': env.db('DATABASE_URL', default='postgres://postgres:postgres@localhost:5432/hole')
+}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # URLS
@@ -306,5 +309,5 @@ REST_FRAMEWORK = {
 }
 OAUTH2_PROVIDER = {
     'RESOURCE_SERVER_INTROSPECTION_URL': 'http://localhost:8000/o/introspect/',
-    'RESOURCE_SERVER_AUTH_TOKEN': 'Sho9iM5uooM7maecthu3ar6OJoosahb2iM4Iosh1the3Eiquuolee2OlaiGe7ex8',
+    'RESOURCE_SERVER_AUTH_TOKEN': 'pGJX9xQ2RdkE56kXQQUL7rZFZhuui7',
 }
